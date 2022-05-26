@@ -1,0 +1,127 @@
+body {
+    height:3000px;
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 95%;
+    margin:auto;
+}
+
+
+/* Apartado de estilos del cabecero de la página. */
+
+.container_header {
+    color:#fff;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.header_img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+
+.container_nav {
+    top:10px;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr max-content;
+}
+
+.nav {
+    width: 350px;
+    list-style: none;
+}
+
+.nav li {
+    float: left;
+    margin:0 20px;
+}
+
+.nav_link {
+    color:#fff;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.header_logo {
+    font-size: 1.2em;
+}
+
+.header_titulo {
+    text-align: center;
+    margin-top: 160px;
+}
+
+
+/* Apartado de los estilos del logo principal que se encuenta en main. */
+
+.container_logo {
+    height: 110px;
+    margin: 50px auto 0;
+    text-align: center;
+    border-bottom: 2px solid #000;
+}
+
+.logo_titulo {
+    margin:0;
+}
+
+
+/* Apartado de estilos de la section de servicios, dentro de main. */
+
+.container_servicios {
+    margin-top: 50px;
+}
+
+.servicios_titulo {
+    margin: 50px 0;
+}
+
+.icono {
+    font-size: 30px;
+}
+
+.container_tarjetas {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content max-content;
+}
+
+.tarjeta {
+    width: 75%;
+    height: 275px;
+    margin: auto;
+    padding: 15px 0;    
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px #000;
+    border-top: 15px solid #1496B9;
+    outline:1px solid rgba(0, 0, 0, .2); 
+    background-color: rgba(225, 225, 225, .8);
+}
+
+.tarjeta_titulo {
+    cursor: default;
+    color:#000030;
+}
+
+.tarjeta_texto {
+    width: 80%;
+    cursor: default;
+    color:#000040;
+    display: block;
+    text-align: left;
+    margin:25px auto;
+}
+
+.texto-centro {
+    text-align: center;
+}
