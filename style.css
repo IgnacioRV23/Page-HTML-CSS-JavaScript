@@ -14,7 +14,7 @@ body {
 
 .container_header {
     color:#fff;
-    height: 100vh;
+    height: 475px;
     position: relative;
     background-color: rgba(0, 0, 0, .5);
 }
@@ -74,7 +74,7 @@ body {
 }
 
 
-/* Apartado de estilos de la section de servicios, dentro de main. */
+/* Apartado de estilos de la sección de servicios, dentro de main. */
 
 .container_servicios {
     margin-top: 50px;
@@ -101,10 +101,8 @@ body {
     margin: auto;
     padding: 15px 0;    
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0 5px 2px #000;
-    border-top: 15px solid #1496B9;
-    outline:1px solid rgba(0, 0, 0, .2); 
+    border-top: 15px solid #28697D;
+    outline: 1px solid rgba(0, 0, 0, .5);
     background-color: rgba(225, 225, 225, .8);
 }
 
@@ -122,6 +120,67 @@ body {
     margin:25px auto;
 }
 
-.texto-centro {
-    text-align: center;
+.tarjeta_texto:hover {
+    color:#000030;
+    font-size: 17px;
+    text-decoration: underline;
+}
+
+/* Apartado de estilos de la sección de testimonio de los clientes. */
+.flecha {
+    color:#fff;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.container_testimonio {
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.testimonios {
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: max-content;
+}
+
+.testimonios * {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.testimonio_persona {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr max-content;   
+}
+
+.testimonio_texto {
+    color:#fff;
+    width: 90%;
+    grid-column: 1;
+    padding: 20px 0;
+}
+
+.testimonio_titulo {
+    margin:0;
+    color:#000050;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: #fff;
+}
+
+.testimonio_imagen {
+    width: 100%;
+    grid-column: 2;
+}
+
+.testimonio_img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
 }
