@@ -154,6 +154,7 @@ body {
 
 .testimonio_persona {
     display: grid;
+    user-select: none;
     align-items: center;
     grid-template-columns: 1fr max-content;   
 }
@@ -183,4 +184,9 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.testimonio-oculto {
+    opacity: .0;
+    transition: opacity 1s;
 }
