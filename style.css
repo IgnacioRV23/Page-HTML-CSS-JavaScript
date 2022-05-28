@@ -233,4 +233,57 @@ body {
     height: 5px;
     width:158px;
     background: linear-gradient(90deg, #3f9dbb, #74ceff, #a0fff6);
-} 
+}
+
+/* Apartado de estilos de la sección de colaboradores. */
+
+.colaboradores_caja {
+    color: #000040;
+    gap: 30px;
+    display: grid;
+    height: 150px;
+    padding:0 30px;
+    margin:50px auto;
+    align-items: center;
+    border:2px solid #086597;
+    box-shadow: 0 0 5px 1px #000;
+    background-color: #DCFFFF;
+    grid-template-columns: max-content 1fr max-content;
+}
+
+.colaboradores_persona {
+    padding: 10px;
+    margin: auto;
+    width: max-content;
+}
+
+.colaboradores_persona * {
+    margin: auto;
+    display: block;    
+    width: max-content;
+}
+
+.colaboradores_img {
+    width:70px;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.texto_titulo {
+    text-align: center;
+}
+
+.colaboradores_texto {
+    width: 70%;
+    cursor: default;
+    margin: auto;
+    text-align: justify;
+}
+
+.grado_texto {
+    color:#fff;
+    cursor: default;    
+    padding:10px 20px;
+    display: inline-block;
+    background-color: #000050;
+}
