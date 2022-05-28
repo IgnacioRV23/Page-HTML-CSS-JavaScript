@@ -1,5 +1,4 @@
 body {
-  height: 5000px;
   margin: 0%;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -286,4 +285,45 @@ body {
     padding:10px 20px;
     display: inline-block;
     background-color: #000050;
+}
+
+/* Apartado de estilos de la sección de footer. */
+
+.container_footer {
+    width: 100%;
+    height: 250px;
+    margin-top: 115px;
+    color:#eee;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    background-color: #001219;
+}
+
+.container_footer div {
+    width: 25%;
+    margin: auto;
+    
+}
+
+.footer_contacto p {
+    width: 70%;
+    margin: 25px auto;
+}
+
+.footer_titulo {
+    text-align: center;
+}
+
+.footer_parrafo {
+    text-align: justify;
+}
+
+.footer_redes {
+    text-align: center;
+}
+
+.red_social {
+    margin: 30px;
+    display: inline-block;
 }
