@@ -12,7 +12,7 @@ body {
 
 .container_header {
   color: #fff;
-  height: 100vh;
+  height: 75vh;
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -211,119 +211,128 @@ body {
 }
 
 .dato_empresa {
-    color:#fff;
-    cursor: default;
-    padding-bottom: 5px;
+  color: #fff;
+  cursor: default;
+  padding-bottom: 5px;
 }
 
 .dato_empresa::before {
-    content: "";
-    position: absolute;
-    margin-top: 20px;
-    height: 5px;
-    width:158px;
-    background: linear-gradient(90deg, #71cdff, #1c9ade, rgba(8, 101, 151, 1));
-} 
+  content: "";
+  position: absolute;
+  margin-top: 20px;
+  height: 5px;
+  background: linear-gradient(90deg, #71cdff, #1c9ade, rgba(8, 101, 151, 1));
+}
+
+.dato_linea1::before {
+  width: 225px;
+}
+
+.dato_linea2::before {
+  width: 251px;
+}
+
+.dato_linea3::before {
+  width: 258px;
+}
 
 .dato_empresa:hover::before {
-    content: "";
-    position: absolute;
-    margin-top: 20px;
-    height: 5px;
-    width:158px;
-    background: linear-gradient(90deg, #3f9dbb, #74ceff, #a0fff6);
+  background: linear-gradient(90deg, #3f9dbb, #74ceff, #a0fff6);
 }
 
 /* Apartado de estilos de la sección de colaboradores. */
 
 .colaboradores_caja {
-    color: #000040;
-    gap: 30px;
-    display: grid;
-    height: 150px;
-    padding:0 30px;
-    margin:50px auto;
-    align-items: center;
-    border:2px solid #086597;
-    box-shadow: 0 0 5px 1px #000;
-    background-color: #DCFFFF;
-    grid-template-columns: max-content 1fr max-content;
+  color: #000040;
+  gap: 30px;
+  display: grid;
+  height: 150px;
+  padding: 0 30px;
+  margin: 50px auto;
+  align-items: center;
+  border: 2px solid #086597;
+  box-shadow: 0 0 5px 1px #000;
+  background-color: #DCFFFF;
+  grid-template-columns: max-content 1fr max-content;
 }
 
 .colaboradores_persona {
-    padding: 10px;
-    margin: auto;
-    width: max-content;
+  padding: 10px;
+  margin: auto;
+  width: max-content;
 }
 
 .colaboradores_persona * {
-    margin: auto;
-    display: block;    
-    width: max-content;
+  margin: auto;
+  display: block;
+  width: max-content;
 }
 
 .colaboradores_img {
-    width:70px;
-    border-radius: 50%;
-    margin: 10px auto;
+  width: 70px;
+  border-radius: 50%;
+  margin: 10px auto;
+  border: 1px solid #000050;
 }
 
 .texto_titulo {
-    text-align: center;
+  text-align: center;
 }
 
 .colaboradores_texto {
-    width: 70%;
-    cursor: default;
-    margin: auto;
-    text-align: justify;
+  width: 70%;
+  cursor: default;
+  margin: auto;
+  text-align: justify;
 }
 
 .grado_texto {
-    color:#fff;
-    cursor: default;    
-    padding:10px 20px;
-    display: inline-block;
-    background-color: #000050;
+  width: 100px;
+  color: #fff;
+  cursor: default;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  background-color: #000050;
 }
 
 /* Apartado de estilos de la sección de footer. */
 
 .container_footer {
-    width: 100%;
-    height: 250px;
-    margin-top: 115px;
-    color:#eee;
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    background-color: #001219;
+  width: 100%;
+  height: 250px;
+  margin-top: 115px;
+  color: #eee;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  background-color: #001219;
 }
 
 .container_footer div {
-    width: 25%;
-    margin: auto;
-    
+  width: 25%;
+  margin: auto;
+
 }
 
 .footer_contacto p {
-    width: 70%;
-    margin: 25px auto;
+  width: 70%;
+  margin: 25px auto;
 }
 
 .footer_titulo {
-    text-align: center;
+  text-align: center;
 }
 
 .footer_parrafo {
-    text-align: justify;
+  line-height: 25px;
 }
 
 .footer_redes {
-    text-align: center;
+  text-align: center;
 }
 
 .red_social {
-    margin: 30px;
-    display: inline-block;
+  margin: 30px;
+  display: inline-block;
 }
