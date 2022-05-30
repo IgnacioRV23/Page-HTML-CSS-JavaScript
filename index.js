@@ -72,4 +72,15 @@ const testimonio = () => {
     });
 }
 
+const menu = () => {
+
+    let containerNav = document.getElementById("containerNav");
+
+    window.addEventListener("scroll", () => {
+        containerNav.classList.toggle("despliegaMenu", window.scrollY > 0);
+    });
+}
+
+
+menu();
 testimonio();

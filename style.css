@@ -9,52 +9,57 @@ body {
 }
 
 /* Apartado de estilos del cabecero de la página. */
-
-.container_header {
-  color: #fff;
-  height: 75vh;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-
 .header_img {
-  position: absolute;
-  height: 100%;
+  height: 75vh;
   width: 100%;
   z-index: -1;
   opacity: 0.8;
+  position: absolute;
+}
+
+.container_header {
+  height: 75vh;
+  background-color: rgba(0, 0, 0, .4);
 }
 
 .container_nav {
-  top: 10px;
-  display: grid;
-  position: relative;
-  grid-template-columns: 1fr max-content;
+  font-size: 18px;
+  color:#fff;
+  display: flex;
+  height: 50px;
+  padding: 10px;
+  transition: 0.4s;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.nav {
-  width: 350px;
+.container_list li {
   list-style: none;
+  display: inline-block;
 }
 
-.nav li {
-  float: left;
-  margin: 0 20px;
-}
-
-.nav_link {
-  color: #fff;
-  font-size: 1.2em;
+.container_list a {
+  color:#fff;
+  margin:0 30px;
   text-decoration: none;
 }
 
-.nav_link:hover {
+.container_list a:hover {
   text-decoration: underline;
 }
 
-.header_logo {
-  font-size: 1.2em;
+.despliegaMenu {
+  top: 0;
+  width: 100%;
+  color:#fff;
+  position: fixed;
+  transition: 0.4s;
+  background-color: #001219;
+  border-bottom: 1px solid #fff;
+}
+
+.despliegaMenu a {
+  color:#fff;
 }
 
 /* Apartado de los estilos del logo principal que se encuenta en main. */
@@ -108,7 +113,7 @@ body {
 }
 
 .tarjeta_texto {
-  width: 80%;
+  width: 85%;
   cursor: default;
   color: #000040;
   display: block;
@@ -335,4 +340,9 @@ body {
 .red_social {
   margin: 30px;
   display: inline-block;
+}
+
+.ancla_red {
+  color:#fff;
+  text-decoration: none;
 }
