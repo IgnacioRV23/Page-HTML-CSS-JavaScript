@@ -1,4 +1,13 @@
-var contador = 1;
+var contadorTestimonio = 1;
+
+var contadorBanner = 1;
+
+//Se crea de manera global estas constantes para ser utilizadas en dos funciones distintas.
+const btn1 = document.getElementById("btn1");
+        
+const btn2 = document.getElementById("btn2");
+        
+const btn3 = document.getElementById("btn3");
 
 const testimonio = () => {
 
@@ -13,14 +22,14 @@ const testimonio = () => {
     let testimonio3 = document.getElementById("testimonio3");
 
     flechaAtras.addEventListener("click", () => {
-        switch (contador) {
+        switch (contadorTestimonio) {
 
             //Oculta testimonio1, Muestra testimonio3.
             case 1:
                 testimonio1.classList.toggle("testimonio-oculto");
                 testimonio3.classList.toggle("testimonio-oculto");
 
-                contador = 3;
+                contadorTestimonio = 3;
             break;
 
             //Oculta testimonio2, Muestra testimonio1.
@@ -28,7 +37,7 @@ const testimonio = () => {
                 testimonio2.classList.toggle("testimonio-oculto");
                 testimonio1.classList.toggle("testimonio-oculto");
 
-                contador = 1;
+                contadorTestimonio = 1;
             break;
 
             //Oculta testimonio3, Muestra testimonio2.
@@ -36,21 +45,21 @@ const testimonio = () => {
                 testimonio3.classList.toggle("testimonio-oculto");
                 testimonio2.classList.toggle("testimonio-oculto");
 
-                contador = 2;
+                contadorTestimonio = 2;
             break;
         }
     })
 
     flechaAdelante.addEventListener("click", () => {
 
-        switch (contador) {
+        switch (contadorTestimonio) {
 
             //Oculta testimonio1, Muestra testimonio2.
             case 1:
                 testimonio1.classList.toggle("testimonio-oculto");
                 testimonio2.classList.toggle("testimonio-oculto");
 
-                contador++;
+                contadorTestimonio++;
             break;
 
             //Oculta testimonio2, Muestra testimonio3.
@@ -58,15 +67,15 @@ const testimonio = () => {
                 testimonio2.classList.toggle("testimonio-oculto");
                 testimonio3.classList.toggle("testimonio-oculto");
                 
-                contador++;
+                contadorTestimonio++;
             break;
 
             //Oculta testimonio3, Muestra testimonio1.
             case 3:
                 testimonio3.classList.toggle("testimonio-oculto");
                 testimonio1.classList.toggle("testimonio-oculto");
-
-                contador = 1;
+                
+                contadorTestimonio = 1;
             break;
         }
     });
@@ -81,6 +90,61 @@ const menu = () => {
     });
 }
 
+const heroBanner = () => {
+    
+    const imgBanner = document.getElementById("imgBanner");
+
+    switch (contadorBanner) {
+        case 1:
+            imgBanner.src = "./img/banner1.jpg";
+            btn3.classList.replace("bi-circle-fill", "bi-circle");
+            btn1.classList.replace("bi-circle", "bi-circle-fill");
+            contadorBanner = 2;
+        break;
+
+        case 2:
+            imgBanner.src = "./img/banner2.jpg";
+            btn1.classList.replace("bi-circle-fill", "bi-circle");
+            btn2.classList.replace("bi-circle", "bi-circle-fill");
+            contadorBanner = 3;
+        break;
+
+        case 3:
+            imgBanner.src = "./img/banner3.jpg";
+            btn2.classList.replace("bi-circle-fill", "bi-circle");
+            btn3.classList.replace("bi-circle", "bi-circle-fill");
+            contadorBanner = 1;
+        break;
+    }
+}
+
+const btnBanner = () => {
+    btn1.addEventListener("click", () => {
+        imgBanner.src = "./img/banner1.jpg";
+        btn1.classList.replace("bi-circle", "bi-circle-fill");
+        btn2.classList.replace("bi-circle-fill", "bi-circle");
+        btn3.classList.replace("bi-circle-fill", "bi-circle");
+        contadorBanner = 1;
+    });
+
+    btn2.addEventListener("click", () => {
+        imgBanner.src = "./img/banner2.jpg";
+        btn2.classList.replace("bi-circle", "bi-circle-fill");
+        btn1.classList.replace("bi-circle-fill", "bi-circle");
+        btn3.classList.replace("bi-circle-fill", "bi-circle");
+        contadorBanner = 2;
+    });
+
+    btn3.addEventListener("click", () => {
+        imgBanner.src = "./img/banner3.jpg";
+        btn3.classList.replace("bi-circle", "bi-circle-fill");
+        btn1.classList.replace("bi-circle-fill", "bi-circle");
+        btn2.classList.replace("bi-circle-fill", "bi-circle");
+        contadorBanner = 1;
+    });
+}
 
 menu();
 testimonio();
+setInterval(heroBanner, 4000);
+btnBanner();

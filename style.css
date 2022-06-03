@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
 
 body {
   margin: 0%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 .container {
@@ -22,6 +22,22 @@ body {
 .container_header {
   height: 75vh;
   background-color: rgba(0, 0, 0, .4);
+}
+
+.nav_logo {
+  display: flex;
+  align-items: center;
+}
+
+.icono_logo {
+  margin:0 7px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+.header_logo {
+  display: inline-block;
 }
 
 .container_nav {
@@ -51,6 +67,22 @@ body {
   text-decoration: underline;
 }
 
+.container_circleNav {
+  top:-30px;
+  margin: auto;
+  text-align:center;
+  position: relative;
+  width: max-content;
+}
+
+.icono_header {
+  color:#fff;
+  cursor:pointer;
+  margin: 0 30px;
+  font-size: 18px;
+}
+
+/* Los estilos de despliga, permiten que el menu sea fijo y que cambie de color con transición. */
 .despliegaMenu {
   top: 0;
   width: 100%;
@@ -72,10 +104,6 @@ body {
   margin: 30px auto 0;
   text-align: center;
   border-bottom: 2px solid #000;
-}
-
-.logo_titulo {
-  margin: 0;
 }
 
 /* Apartado de estilos de la sección de servicios, dentro de main. */
@@ -197,12 +225,30 @@ body {
 
 /* Apartado de estilos de la sección de local. */
 
-.local_img {
-  height: 100%;
-  width: 100%;
-  margin: auto;
-  display: block;
-  box-shadow: 0 0 3px 2px #000;
+.container_banner {
+  display: grid;
+  width:80%;
+  height: 70vh;
+  text-align: center;
+  background-color:#001219;
+  border: 5px solid #001219;
+  box-shadow: 0 0 3px 1px #000;
+}
+
+.banner {
+  opacity: 1;
+  width:100%;
+  height: 70vh;
+  grid-row: 1;
+  grid-column: 1;
+  transition:all 0.5s;
+}
+
+.banner_oculto {
+  margin-top: 15%;
+  opacity: 0;
+  width:100px;
+  height:100px;
 }
 
 /* Apartado de estilos de la sección de datos. */
@@ -319,8 +365,8 @@ body {
 
 .container_footer div {
   width: 25%;
+  height:167px;
   margin: auto;
-
 }
 
 .footer_contacto p {
