@@ -130,7 +130,12 @@ body {
   grid-template-rows: max-content max-content;
 }
 
+.tarjetas_ocultas * {
+  font-size:0px;
+}
+
 .tarjeta {
+  transition: all 4s;
   width: 75%;
   height: 240px;
   margin: auto;
@@ -138,7 +143,7 @@ body {
   text-align: center;
   border-top: 10px solid #003246;
   box-shadow: 0px 0 5px 1px #000;
-  background-color: rgba(225, 225, 225, 0.8);
+  background-color:#fff;
 }
 
 .tarjeta_titulo {
@@ -235,34 +240,6 @@ body {
   transition: opacity 1s;
 }
 
-/* Apartado de estilos de la sección de local. */
-
-.container_banner {
-  display: grid;
-  width:80%;
-  height: 70vh;
-  text-align: center;
-  background-color:#001219;
-  border: 5px solid #001219;
-  box-shadow: 0 0 3px 1px #000;
-}
-
-.banner {
-  opacity: 1;
-  width:100%;
-  height: 70vh;
-  grid-row: 1;
-  grid-column: 1;
-  transition:all 0.5s;
-}
-
-.banner_oculto {
-  margin-top: 15%;
-  opacity: 0;
-  width:100px;
-  height:100px;
-}
-
 /* Apartado de estilos de la sección de datos. */
 
 .container_datos {
@@ -317,65 +294,72 @@ body {
 
 /* Apartado de estilos de la sección de colaboradores. */
 
+.colaboradores_caja * {
+  cursor:default;
+}
+
 .colaboradores_caja {
-  color: #000040;
-  gap: 30px;
-  display: grid;
-  height: 150px;
-  padding: 0 30px;
-  margin: 50px auto;
-  align-items: center;
-  border: 2px solid #086597;
-  box-shadow: 0 0 5px 1px #000;
-  background-color: #DCFFFF;
-  grid-template-columns: max-content 1fr max-content;
-}
-
-.colaboradores_persona {
-  padding: 10px;
-  margin: auto;
-  width: max-content;
-}
-
-.colaboradores_persona * {
-  margin: auto;
-  display: block;
-  width: max-content;
+  display:grid;
+  color:#fff;
+  margin:30px auto;
+  text-align: center;
+  grid-template-rows: 1;
+  grid-template-columns: 1fr max-content;
+  background-color: #001219;
+  border-left: 5px solid #32b0da;
 }
 
 .colaboradores_img {
-  width: 70px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  margin: 10px auto;
-  border: 1px solid #000050;
 }
 
-.texto_titulo {
-  text-align: center;
+.colaborador_nombre {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-.colaboradores_texto {
-  width: 70%;
-  cursor: default;
-  margin: auto;
-  text-align: justify;
+.colaboradores_persona {
+  padding: 15px;
 }
 
 .grado_texto {
-  width: 100px;
-  color: #fff;
+  width: 200px;
+  color: #000;  
   cursor: default;
   padding: 10px 20px;
-  text-align: center;
   display: inline-block;
-  background-color: #000050;
+  background-color: #fff;
+  transition:border-radius 0.5s;
+}
+
+.grado_texto:hover {
+  border-radius: 30px;
+  transition:border-radius 0.5s;
+}
+
+.texto_titulo {
+  margin:0;
+}
+
+.texto_parrafo {
+  margin:5px auto 0;
+  width: 80%;
+}
+
+.img_tarjeta {
+  width: 404px;
+  height: 404px;
+  display: block;
 }
 
 /* Apartado de estilos de la sección de footer. */
 
 .container_footer {
   width: 100%;
-  height: 250px;
+  height: 200px;
   margin-top: 115px;
   color: #eee;
   display: flex;

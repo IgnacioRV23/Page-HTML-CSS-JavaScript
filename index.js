@@ -157,8 +157,17 @@ const mostrarDatos = () => {
     })
 }
 
+const mostrarServicios = () => {
+    const containerTarjetas = document.getElementById("containerTarjetas");
+
+    window.addEventListener("scroll", () => {
+        containerTarjetas.classList.remove("tarjetas_ocultas", window.onpageshow);
+    });
+}
+
 menu();
 testimonio();
 setInterval(heroBanner, 4000);
 btnBanner();
 mostrarDatos();
+mostrarServicios();

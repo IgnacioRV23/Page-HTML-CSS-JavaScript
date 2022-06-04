@@ -28,7 +28,7 @@
                     </li>
 
                     <li>
-                        <a href="#serviciosTitulo" class="nav_link" id="navLink">Servicios</a>
+                        <a href="#containerServicios" class="nav_link" id="navLink">Servicios</a>
                     </li>
 
                     <li>
@@ -67,11 +67,11 @@
             </div>
         </section>
 
-        <section class="container_servicios container">
-            <h2 class="servicios_titulo">Conozca nuestros Servicios</h2>
+        <section class="container_servicios container" id="containerServicios">
+            <h2 class="servicios_titulo">Conozca nuestros servicios</h2>
 
-            <div class="container_tarjetas">
-                <div class="tarjeta">
+            <div class="container_tarjetas tarjetas_ocultas" id="containerTarjetas">
+                <div class="tarjeta tarjeta_oculta">
                     <i class="bi bi-window-fullscreen icono icono_servicios"></i>
 
                     <h4 class="tarjeta_titulo">Desarrollo Web</h4>
@@ -206,30 +206,36 @@
         </section>
         
         <section class="container_colaboradores container">
-            <h3 class="colaboradores_titulo">Nuestros Profesionales</h3>
+            <h3 class="colaboradores_titulo">Conozca nuestros profesionales</h3>
 
             <div class="colaboradores_caja">
-                <div class="colaboradores_persona">
-                    <img src="img/work1.png" alt="colaborador1" class="colaboradores_img">
-                    <p class="colaborador_nombre">Adolfo</p>
+                <div class="colaborador_tarjeta">
+                    <div class="colaboradores_persona">
+                        <img src="img/colaborador1.jpg" alt="colaborador1" class="colaboradores_img">
+                        <p class="colaborador_nombre">Adolfo</p>
+                    </div>
+    
+                    <div class="colaboradores_texto">
+                        <h4 class="texto_titulo">Experiencia</h4>
+    
+                        <p class="texto_parrafo">
+                            Desarrollador de software, con mas de 10 años de experiencia. Especialista en servicios de alta calidad, creación de infraestructura informática y amplio conocimiento de UX y UI.
+                        </p>
+                    </div>
+    
+                    <div class="colaboradores_grado">
+                        <p class="grado_texto">Ingeniero</p>
+                    </div>
                 </div>
 
-                <div class="colaboradores_texto">
-                    <h4 class="texto_titulo">Experiencia</h4>
-
-                    <p class="texto_parrafo">
-                        Desarrollador de software, con mas de 10 años de experiencia. Especialista en servicios de alta calidad, creación de infraestructura informática y amplio conocimiento de UX y UI.
-                    </p>
-                </div>
-
-                <div class="colaboradores_grado">
-                    <p class="grado_texto">Ingeniero</p>
+                <div class="colaborador_imagen">
+                    <img src="img/code-man.jpg" alt="" class="img_tarjeta">
                 </div>
             </div>
 
             <div class="colaboradores_caja">
                 <div class="colaboradores_persona">
-                    <img src="img/work2.png" alt="colaborador1" class="colaboradores_img">
+                    <img src="img/colaborador3.jpg" alt="colaborador1" class="colaboradores_img">
                     <p class="colaborador_nombre">Juana</p>
                 </div>
 
@@ -248,7 +254,7 @@
 
             <div class="colaboradores_caja">
                 <div class="colaboradores_persona">
-                    <img src="img/work3.png" alt="colaborador1" class="colaboradores_img">
+                    <img src="img/colaborador2.jpg" alt="colaborador1" class="colaboradores_img">
                     <p class="colaborador_nombre">Fabricio</p>
                 </div>
 
