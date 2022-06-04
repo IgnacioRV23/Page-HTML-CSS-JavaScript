@@ -97,13 +97,11 @@ body {
   color:#fff;
 }
 
-/* Apartado de los estilos del logo principal que se encuenta en main. */
-
-.container_logo {
+/* Apartado de los estilos del texto principal que se encuenta en main. */
+.container_cabeceroMain {
   height: 110px;
-  margin: 30px auto 0;
+  margin: 70px auto;
   text-align: center;
-  border-bottom: 2px solid #000;
 }
 
 /* Apartado de estilos de la sección de servicios, dentro de main. */
@@ -114,10 +112,15 @@ body {
 
 .servicios_titulo {
   margin: 50px 0;
+  font-size: 22px;
 }
 
 .icono {
   font-size: 30px;
+}
+
+.icono_servicios {
+  color:#003246;
 }
 
 .container_tarjetas {
@@ -129,12 +132,12 @@ body {
 
 .tarjeta {
   width: 75%;
-  height: 275px;
+  height: 240px;
   margin: auto;
   padding: 15px 0;
   text-align: center;
-  border-top: 15px solid #003246;
-  outline: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: 10px solid #003246;
+  box-shadow: 0px 0 5px 1px #000;
   background-color: rgba(225, 225, 225, 0.8);
 }
 
@@ -148,14 +151,23 @@ body {
   cursor: default;
   color: #000040;
   display: block;
-  text-align: left;
-  margin: 25px auto;
+  text-align: center;
+  margin: auto;
 }
 
-.tarjeta_texto:hover {
-  color: #000030;
-  font-size: 17px;
-  text-decoration: underline;
+.btn_servicios {
+  color:#fff;
+  margin-top:15px;
+  cursor: pointer;
+  padding:8px 25px;
+  display:inline-block;
+  background-color: #003246;
+  transition:border-radius 0.5s;
+}
+
+.btn_servicios:hover {
+  border-radius: 30px;
+  transition:border-radius 0.5s;
 }
 
 /* Apartado de estilos de la sección de testimonio de los clientes. */
@@ -258,8 +270,10 @@ body {
 }
 
 .datos {
+  height:75px;
   display: flex;
   padding: 30px;
+  align-items: center;
   justify-content: space-around;
   background-color: #001219;
 }
@@ -279,15 +293,22 @@ body {
 }
 
 .dato_linea1::before {
-  width: 225px;
+  width: 200px;
+  transition:width 5s;
 }
 
 .dato_linea2::before {
-  width: 251px;
+  width: 200px;
+  transition:width 5s;
 }
 
 .dato_linea3::before {
-  width: 258px;
+  width: 200px;
+  transition:width 5s;
+}
+
+.linea_oculta::before {
+  width:0;
 }
 
 .dato_empresa:hover::before {

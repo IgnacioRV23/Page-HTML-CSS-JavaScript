@@ -144,7 +144,21 @@ const btnBanner = () => {
     });
 }
 
+const mostrarDatos = () => {
+    const datoEmpresa1 = document.getElementById("datoEmpresa1");
+    const datoEmpresa2 = document.getElementById("datoEmpresa2");
+    const datoEmpresa3 = document.getElementById("datoEmpresa3");
+
+
+    window.addEventListener("scroll", () => {
+        datoEmpresa1.classList.remove("linea_oculta", window.onpageshow);
+        datoEmpresa2.classList.remove("linea_oculta", window.onpageshow);
+        datoEmpresa3.classList.remove("linea_oculta", window.onpageshow);
+    })
+}
+
 menu();
 testimonio();
 setInterval(heroBanner, 4000);
 btnBanner();
+mostrarDatos();
