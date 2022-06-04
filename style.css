@@ -141,9 +141,9 @@ body {
   margin: auto;
   padding: 15px 0;
   text-align: center;
-  border-top: 10px solid #003246;
-  box-shadow: 0px 0 5px 1px #000;
   background-color:#fff;
+  border-top: 10px solid #003246;
+  box-shadow: 0px 0 5px 1px #808080;
 }
 
 .tarjeta_titulo {
@@ -304,14 +304,15 @@ body {
   margin:30px auto;
   text-align: center;
   grid-template-rows: 1;
-  grid-template-columns: 1fr max-content;
   background-color: #001219;
-  border-left: 5px solid #32b0da;
+  box-shadow: 0 0 5px 1px #808080;
+  grid-template-columns: 1fr max-content;
 }
 
 .colaboradores_img {
   width: 200px;
   height: 200px;
+  object-fit:cover;
   border-radius: 50%;
 }
 
@@ -345,11 +346,13 @@ body {
 }
 
 .texto_parrafo {
-  margin:5px auto 0;
   width: 80%;
+  text-align:justify;
+  margin:5px auto 0;
 }
 
 .img_tarjeta {
+  opacity: .5;
   width: 404px;
   height: 404px;
   display: block;
