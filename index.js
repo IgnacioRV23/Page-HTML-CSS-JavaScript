@@ -2,6 +2,8 @@ var contadorTestimonio = 1;
 
 var contadorBanner = 1;
 
+var contadorTestimonio = 1;
+
 //Se crea de manera global estas constantes para ser utilizadas en dos funciones distintas.
 const btn1 = document.getElementById("btn1");
         
@@ -9,41 +11,47 @@ const btn2 = document.getElementById("btn2");
         
 const btn3 = document.getElementById("btn3");
 
+
+//Variables globales para el apartado de testimonio.
+const testimonio1 = document.getElementById("testimonio1");
+
+const testimonio2 = document.getElementById("testimonio2");
+
+const testimonio3 = document.getElementById("testimonio3");
+
 const testimonio = () => {
 
     let flechaAdelante = document.getElementById("flechaAdelante");
 
     let flechaAtras = document.getElementById("flechaAtras");
 
-    let testimonio1 = document.getElementById("testimonio1");
-
-    let testimonio2 = document.getElementById("testimonio2");
-
-    let testimonio3 = document.getElementById("testimonio3");
 
     flechaAtras.addEventListener("click", () => {
         switch (contadorTestimonio) {
 
             //Oculta testimonio1, Muestra testimonio3.
-            case 1:
-                testimonio1.classList.toggle("testimonio-oculto");
-                testimonio3.classList.toggle("testimonio-oculto");
-
-                contadorTestimonio = 3;
-            break;
-
-            //Oculta testimonio2, Muestra testimonio1.
             case 2:
-                testimonio2.classList.toggle("testimonio-oculto");
-                testimonio1.classList.toggle("testimonio-oculto");
+                testimonio1.classList.add("testimonio-oculto");
+                testimonio2.classList.add("testimonio-oculto");
+                testimonio3.classList.remove("testimonio-oculto");
 
                 contadorTestimonio = 1;
             break;
 
             //Oculta testimonio3, Muestra testimonio2.
+            case 1:
+                testimonio1.classList.add("testimonio-oculto");
+                testimonio2.classList.remove("testimonio-oculto");
+                testimonio3.classList.add("testimonio-oculto");
+
+                contadorTestimonio = 3;
+            break;
+
+            //Oculta testimonio2, Muestra testimonio1.
             case 3:
-                testimonio3.classList.toggle("testimonio-oculto");
-                testimonio2.classList.toggle("testimonio-oculto");
+                testimonio1.classList.remove("testimonio-oculto");
+                testimonio2.classList.add("testimonio-oculto");
+                testimonio3.classList.add("testimonio-oculto");
 
                 contadorTestimonio = 2;
             break;
@@ -55,30 +63,58 @@ const testimonio = () => {
         switch (contadorTestimonio) {
 
             //Oculta testimonio1, Muestra testimonio2.
-            case 1:
-                testimonio1.classList.toggle("testimonio-oculto");
-                testimonio2.classList.toggle("testimonio-oculto");
+            case 2:
+                testimonio1.classList.add("testimonio-oculto");
+                testimonio2.classList.remove("testimonio-oculto");
+                testimonio3.classList.add("testimonio-oculto");
 
-                contadorTestimonio++;
+                contadorTestimonio = 3;
             break;
 
             //Oculta testimonio2, Muestra testimonio3.
-            case 2:
-                testimonio2.classList.toggle("testimonio-oculto");
-                testimonio3.classList.toggle("testimonio-oculto");
+            case 3:
+                testimonio1.classList.add("testimonio-oculto");
+                testimonio2.classList.add("testimonio-oculto");
+                testimonio3.classList.remove("testimonio-oculto");
                 
-                contadorTestimonio++;
+                contadorTestimonio = 1;
             break;
 
             //Oculta testimonio3, Muestra testimonio1.
-            case 3:
-                testimonio3.classList.toggle("testimonio-oculto");
-                testimonio1.classList.toggle("testimonio-oculto");
+            case 1:
+                testimonio1.classList.remove("testimonio-oculto");
+                testimonio2.classList.add("testimonio-oculto");
+                testimonio3.classList.add("testimonio-oculto");
                 
                 contadorTestimonio = 1;
             break;
         }
     });
+}
+
+const testimonioBanner = () => {
+    switch (contadorTestimonio) {
+        case 1:
+            testimonio1.classList.remove("testimonio-oculto");
+            testimonio2.classList.add("testimonio-oculto");
+            testimonio3.classList.add("testimonio-oculto");
+            contadorTestimonio = 2; //Vale 2 cuando el banner está en 1.
+        break;
+
+        case 2:
+            testimonio1.classList.add("testimonio-oculto");
+            testimonio2.classList.remove("testimonio-oculto");
+            testimonio3.classList.add("testimonio-oculto");
+            contadorTestimonio = 3; //Vale 3 cuando el banner está en 2.
+        break;
+
+        case 3:
+            testimonio1.classList.add("testimonio-oculto");
+            testimonio2.classList.add("testimonio-oculto");
+            testimonio3.classList.remove("testimonio-oculto");
+            contadorTestimonio = 1; //Vale 1 cuando el banner está en 3.
+        break;
+    }
 }
 
 const menu = () => {
@@ -167,7 +203,8 @@ const mostrarServicios = () => {
 
 menu();
 testimonio();
-setInterval(heroBanner, 4000);
+setInterval(testimonioBanner, 4000);
+setInterval(heroBanner, 2000);
 btnBanner();
 mostrarDatos();
 mostrarServicios();

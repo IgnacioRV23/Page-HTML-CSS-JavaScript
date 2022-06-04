@@ -206,6 +206,7 @@ body {
   user-select: none;
   align-items: center;
   grid-template-columns: 1fr max-content;
+  transition: all 1s;
 }
 
 .testimonio_texto {
@@ -237,7 +238,7 @@ body {
 
 .testimonio-oculto {
   opacity: 0;
-  transition: opacity 1s;
+  transition: all 1s;
 }
 
 /* Apartado de estilos de la sección de datos. */
