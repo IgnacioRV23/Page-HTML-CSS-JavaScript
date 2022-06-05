@@ -201,6 +201,56 @@ const mostrarServicios = () => {
     });
 }
 
+const ponerColor = (elemento, empresa) => {
+    switch (empresa) {
+        case 1:
+            elemento.style.color= "#1B80E4";
+        break;
+
+        case 2:
+            elemento.style.color= "#5865F2";
+        break;
+
+        case 3:
+            elemento.style.color= "#C51F61";
+        break;
+
+        case 4:
+            elemento.style.color= "#F34F29";
+        break;
+
+        case 5:
+            elemento.style.color= "#20C92F";
+        break;
+
+        case 6:
+            elemento.style.color= "#1FD561";
+        break;
+
+        case 7:
+            elemento.style.color= "#0274B3";
+        break;
+
+        case 8:
+            elemento.style.color= "#E60023";
+        break;
+
+        case 9:
+            elemento.style.color= "#603FAA";
+        break;
+
+        case 10:
+            elemento.style.color= "#1B80E4";
+        break;
+    }
+}
+
+const quitarColor = (elemento) => {
+    if (elemento.style.color != "#000") {
+        elemento.style.color = "#000";
+    }
+}
+
 menu();
 testimonio();
 setInterval(testimonioBanner, 4000);

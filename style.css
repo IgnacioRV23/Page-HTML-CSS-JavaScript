@@ -104,6 +104,28 @@ body {
   text-align: center;
 }
 
+/* Apartado de los estilos de la seccción de empresas que se encuenta en main. */
+
+.titulo_empresas {
+  margin: 50px 0;
+  font-size: 22px;
+}
+
+.empresas {
+  margin:100px auto;
+  width: max-content;
+}
+
+.icono_empresa {
+  margin:80px;
+  font-size:50px;
+}
+
+.icono_transicion {
+  transition: all .5s;
+}
+
+
 /* Apartado de estilos de la sección de servicios, dentro de main. */
 
 .container_servicios {
