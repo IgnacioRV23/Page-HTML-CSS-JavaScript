@@ -263,6 +263,94 @@ body {
   transition: all 1s;
 }
 
+/* Apartado de estilos de la sección de formulario de main. */
+
+.centra_formulario {
+  text-align: center;
+}
+
+.formulario {
+  position:relative;
+  bottom:60px;
+  left: 60px;
+  width: 40%;
+  margin: auto;
+  padding: 15px 0;
+  text-align: center;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, .95);
+  box-shadow: 0 0 5px 1px #808080;
+}
+
+.cabecero_formulario {
+  margin: 50px 0;
+  font-size: 22px;
+}
+
+.titulo_formulario {
+  font-size: 1.2em;
+}
+
+.campo_formulario {
+  border:none;
+  outline: 0;
+  width: 200px;
+  margin: 0 5px;
+  display: inline-block;
+  border-bottom: 1px solid #808080;
+}
+
+.email_formulario {
+  border:none;
+  margin:30px auto;
+  outline:none;
+  display:block;
+  width: 420px;
+  border-bottom: 1px solid #808080;
+}
+
+.titulo_mensaje {
+  margin:auto;
+  width: 425px;
+  text-align:left;
+}
+
+.mensaje_formulario {
+  resize: none;
+  outline: none;
+  width:420px;
+  border: 1px solid rgba(128, 128, 128, .8);
+}
+
+.btn_formulario {
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  display: block;
+  padding:10px;
+  width: 425px;
+  margin: 47px auto 0;
+  background-color: #003246;
+  transition:border-radius 0.5s;
+}
+
+.btn_formulario:hover {
+  border-radius: 15px;
+  transition:border-radius 0.5s;
+}
+
+.formulario_img {
+  margin: auto;
+  width: 700px;
+  height:537px;
+  display:inline-block;
+}
+
+.imagen_formulario {
+  width: 690px;
+  height:527px;
+}
+
 /* Apartado de estilos de la sección de datos. */
 
 .container_datos {
@@ -330,6 +418,11 @@ body {
   background-color: #001219;
   box-shadow: 0 0 5px 1px #808080;
   grid-template-columns: 1fr max-content;
+}
+
+.colaboradores_titulo {
+  margin: 50px 0;
+  font-size: 22px;
 }
 
 .colaboradores_img {
